@@ -1,0 +1,61 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@model List<Good.Models.POST>
+
+<!--
+<div class="wrapper">
+    <form class="form-signin" method="post" action="~/Home/saveuser">       
+      <h2 class="form-signin-heading">Please login</h2>
+      <input type="text" class="form-control" name="email" placeholder="Email Address" required="" autofocus="" />
+      <input type="password" class="form-control" name="password" placeholder="Password" required=""/>      
+      <label class="checkbox">
+        <input type="checkbox" value="remember-me" id="rememberMe" name="rememberMe"> Remember me
+      </label>
+      <button class="btn btn-lg btn-primary btn-block" type="submit">Login</button>  
+    </form>
+     <button class="btn btn-lg btn-primary btn-block">@Html.ActionLink("SignUp","SignUp","Home")</button> 
+</div>
+    -->
+<style>
+    #ide {
+    
+    color:black;
+    }
+</style>
+<style>
+ul {
+    display: block;
+    list-style-type: disc;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    margin-left: 0;
+    margin-right: 0;
+    padding-left: 40px;
+}
+</style>
+
+<div id="ide">
+<div class="product-grid" >
+	
+	
+    @foreach (var y in Model)
+    {
+      
+       <ul>
+         <li><img src="~/Images/@y.image"/></li>
+	    <li><b>Title:</b>@y.title </li> 
+        <li><b>Price:</b>@y.price </li>
+        <li><b>Phone#:</b>@y.phoneno</li>
+	    <li><b>City:</b>@y.city</li>
+        <li><b>Email:</b>@y.email</li>
+        <li><b>Desc:</b>@y.description</li>
+      </ul>
+    }  
+       
+</div> 
+</div>
+
+
+
+

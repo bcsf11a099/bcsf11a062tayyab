@@ -1,0 +1,155 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+      <title>OLx Pets !</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- Le styles -->
+      
+      <!-- here i include styles sheet files-->
+      <link href="~/Content/greenyellow/bootstrap.min.css" rel="stylesheet" />
+      <link href="~/Content/style.css" rel="stylesheet" />
+      
+     
+     
+      
+
+      <!-- here i include javascript files-->
+      <script src="~/Scripts/jquery.js"></script>
+      <script src="~/Scripts/bootstrap-transition.js"></script>
+      <script src="~/Scripts/bootstrap-alert.js"></script>
+      <script src="~/Scripts/bootstrap-modal.js"></script>
+      <script src="~/Scripts/bootstrap-dropdown.js"></script>
+      <script src="~/Scripts/bootstrap-scrollspy.js"></script>
+      <script src="~/Scripts/bootstrap-tab.js"></script>
+      <script src="~/Scripts/bootstrap-tooltip.js"></script>
+      <script src="~/Scripts/bootstrap-popover.js"></script>
+      <script src="~/Scripts/bootstrap-button.js"></script>
+      <script src="~/Scripts/bootstrap-collapse.js"></script>
+      <script src="~/Scripts/bootstrap-carousel.js"></script>
+      <script src="~/Scripts/bootstrap-typeahead.js"></script>
+      <script src="~/Scripts/application.js"></script>
+</head>	
+<body>
+<div class="container">
+
+    <!-- This section contain logo and Images-->
+<div class="row-fluid">
+    <div class="span9"><br/><img src="~/Images/olxtitle.jpg" /></div>
+	<div class="span3"><br/>
+	<div class="pull-right">
+	<a href="#"  original-title="facebook"><img src="~/Images/facebook.png"  alt=" facebook"></a>
+	<a href="#"  original-title="Delicious"><img src="~/Images/Delicious.png"  alt=" delicious"></a>
+	<a href="#"  original-title="myspace"><img src="~/Images/myspace.png" alt="myspace"></a><br/><br/>
+	</div>
+	</div>
+</div>
+    <!-- This Section is for navbar-->
+<div class="navbar">
+    <div class="navbar-inner">
+      <div class="container">
+        <a data-target=".nav-collapse" data-toggle="collapse" class="btn btn-navbar">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </a>
+        
+        <div class="nav-collapse">
+          <ul class="nav">
+              <li class="Active" >@Html.ActionLink("Home","Index","User")</li>
+              
+              <li>@Html.ActionLink("Contact US","Contact_Us","User")</li>
+              <li>@Html.ActionLink("View All posts","ViewAll","User")</li>
+              <li>@Html.ActionLink("Search Ad","searchAd","User")</li>
+              <li>@Html.ActionLink("Post Ad","Post_Add","User")</li>
+          </ul>
+          <form action="" class="navbar-search pull-right">
+            <input type="text" placeholder="Search" class="search-query span2">
+          </form>
+          <ul class="nav pull-right">
+              @*<li>@Html.ActionLink("Sign In","LogIn","Home")</li>*@
+              <li>@Html.ActionLink("Sign Out","LogIn","Home")</li>
+            <li class="divider-vertical"></li>
+          </ul>
+        </div><!-- /.nav-collapse -->
+      </div>
+    </div><!-- /navbar-inner -->
+  </div>
+
+    <!-- This Section is for Carousel-->
+<div class="row-fluid">
+    <div class="span8">
+
+        @RenderBody()
+
+        
+
+
+    </div>
+	
+        <!-- This Section is for side image -->
+	
+	<div class="span4">
+        <img src="~/Images/flag.gif" /><br/><br/>
+        <form class="well form-inline">
+            
+            <div class="col-xs-6 col-sm-3 sidebar-offcanvas" id="sidebar" role="navigation">
+                <table cellspacing="8" cellpadding="4">
+                    <tr >
+                        <h3 ><center>Pets are awesome</center></h3>
+                    </tr>
+                    <tr>
+                        <td><a href="#"><img src="~/Images/s1.jpg" style="width:110px; height:60px" /></a></td>
+                        <td><a href="#"><img src="~/Images/s2.jpg" style="width:110px; height:60px" /></a></td>
+                       
+                        
+                    </tr>
+
+                    <tr>
+                        <td ><a href="#"><img src="~/Images/s4.jpg" style="width:110px; height:60px" /></a></td>
+                        <td ><a href="#"><img src="~/Images/s5.jpg" style="width:110px; height:60px" /></a></td>
+                        
+                    </tr>
+
+                    <tr>
+                        <td><a href="#"><img src="~/Images/s3.jpg" style="width:110px; height:60px" /></a></td>
+                        <td><a href="#"><img src="~/Images/s12.jpg" style="width:110px; height:60px" /></a></td>
+                        
+                    </tr>
+
+                    <tr>
+                        <td><a href="#"><img src="~/Images/s16.jpg" style="width:110px; height:60px" /></a></td>
+                       
+                        <td><a href="#"><img src="~/Images/s1.jpg" style="width:110px; height:60px" /></a></td>
+                    </tr>
+
+                    <tr>
+                        <td><a href="#"><img src="~/Images/s13.jpg" style="width:110px; height:60px" /></a></td>
+                        <td><a href="#"><img src="~/Images/s14.jpg" style="width:110px; height:60px" /></a></td>
+                        
+                    </tr>
+
+                </table>
+
+             </div>
+            
+          </form>
+    </div>
+		
+  </div>
+
+
+
+    
+<div class="row"><center><br/><br/>&copy; Allright reserved. <a href="https://www.facebook.com/tayyab.ashraf.56">Muhammad Tayyab</a> <br/> <br/></center></div>
+   
+</div>
+
+<div id="theme_switcher"></div>
+
+</body>
+
+</html>

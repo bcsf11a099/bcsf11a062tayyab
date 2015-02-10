@@ -1,0 +1,61 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout1.cshtml";
+}
+<html>
+<body>
+    <br />
+<h1>User Details</h1>
+
+                        <label for="op">Province:</label>     
+                        <div class="col-md-4" id="op">
+                        <select class="form-control" id="con" name="prov" required>
+                            <option value="Select">Select</option>
+                            <option value="Khaber Pakhton Khawa">Khaber Pakhton Khawa</option>
+                            <option value="Punjab">Punjab</option>
+                            <option value="Sindh">Sindh</option>
+                            <option value="Balochistan">Balochistan</option>
+                            
+                        </select>
+                        </div>
+            <button type="submit" id="b1" class="btn btn-success">Search Ad</button>
+          
+            <div id="d1">
+               
+            </div>
+<script>
+    $(document).ready(function () {
+        $('#b1').click(function () {
+
+            $("#t1").remove();
+            var c = $("#con").val();
+            if (c === 'Select') {
+                alert("selct first");
+            }
+            else
+            {
+                $.getJSON('/Admin/retProvinceSpecificPost?pr=' + c, function (data) {
+                    $("#d1").append('<table id="t1">');
+
+                    $.each(data, function (i, temp) {
+
+                        $("#t1").append('<tr>');
+                        $("#t1").append('<p>' + temp + '</p>');
+                        $("#t1").append('==========================================================================');
+                        $("#t1").append('</tr>');
+                    });
+                    $("#d1").append('</table>');
+                   
+                    
+                });
+            }
+
+        });
+
+    });
+
+</script>
+    </body>
+    </html>
+
+           
+

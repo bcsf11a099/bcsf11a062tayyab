@@ -1,0 +1,28 @@
+﻿@{
+    ViewBag.Title = "deleteAd";
+    Layout = "~/Views/Shared/_Layout1.cshtml";
+}
+<script type="text/javascript" src="bootstrap-datepicker.de.js" charset="UTF-8"></script>
+<link rel="stylesheet" href="//code.jquery.com/ui/1.11.2/themes/smoothness/jquery-ui.css">
+  <script src="//code.jquery.com/jquery-1.10.2.js"></script>
+  <script src="//code.jquery.com/ui/1.11.2/jquery-ui.js"></script>
+
+
+
+<body>
+<div class="wrapper">
+    <form class="form-signin" method="post" action="~/Admin/deleteSpecificAds">       
+          <h4 class="form-signin-heading">Select date to delete old posts</h4><br/>
+          <p>Date: <input type="text" id="datepicker" name="datepick" required></p>
+          <button type="submit" class="btn btn-success">Delete Adz</button>
+    </form>
+</div>
+</body>
+
+<script>
+    
+    $(function () {
+        $("#datepicker").datepicker();
+    });
+</script>
+

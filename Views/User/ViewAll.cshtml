@@ -1,0 +1,78 @@
+﻿@{
+    ViewBag.Title = "SearchAd";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@model List<Good.Models.POST>
+@*<div class="row">
+        <div class="col-md-12">
+            <h2>Enter Search Criteria</h2>
+            <form role="form" method="post" action="~/User/displaySpecificPosts">
+                <div class="form-group ">
+                    <div class="col-md-2">
+                        <label for="name" class="bg-warning">Ad Title*:</label>
+                    </div>
+                
+                    <div class="col-md-4">
+                        <input type="text" class="form-control" id="name" name="title" placeholder="Enter Name"/>
+                    </div>  
+                     
+                </div>
+            
+                
+                <br/>
+                
+                <div class="col-md-2">
+                        <label for="op">Province:</label>
+                </div>
+                    <div class="col-md-4" id="op">
+                        <select class="form-control" name="prov">
+                            <option value="select">Select</option>
+                            <option value="Khaber Pakhton Khawa">Khaber Pakhton Khawa</option>
+                            <option value="Punjab">Punjab</option>
+                            <option value="Sindh">Sindh</option>
+                            <option value="Balochistan">Balochistan</option>
+                            <option value="Azad Kashmir">Azad Kashmir</option>
+                        </select>
+                    </div>
+                    <br/>
+              
+                    <div class="col-md-2">
+                        <label for="op">City:</label>
+                    </div>
+                    <div class="col-md-4" id="Div1">
+                        <select class="form-control" name="city">
+                            <option value="Lahore">Lahore</option>
+                            <option value="Islamabad">Islamabad</option>
+                            <option value="Faisalabad">Faisalabad</option>
+                            <option value="Karachi">Karachi</option>
+                            <option value="Gujranwala">Gujranwala</option>
+                            <option value="Sargodha">Sargodha</option>
+                        </select>
+                    </div>
+                    <button type="submit" class="btn btn-success">Search Ad</button>
+                </form>
+            </div>
+    </div>*@
+
+    
+<div id="ide">
+
+	
+    @foreach (var y in Model)
+    {
+      <div class="product-grid" >
+       <ul>
+        <li><img src="~/Images/@y.image"/></li>
+	    <li><b>Title:</b>@y.title </li> 
+        <li><b>Price:</b>@y.price </li>
+        <li><b>Phone#:</b>@y.phoneno</li>
+	    <li><b>City:</b>@y.city</li>
+        <li><b>Email:</b>@y.email</li>
+        <li><b>Desc:</b>@y.description</li>
+      </ul>
+          </div>
+    }  
+       
+
+</div>
+                   

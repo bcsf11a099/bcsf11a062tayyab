@@ -1,0 +1,130 @@
+﻿@{
+    ViewBag.Title = "SearchAd";
+    Layout = "~/Views/Shared/_Layout1.cshtml";
+}
+<div class="row">
+        <div class="col-md-12">
+            <h2>Enter Search Criteria</h2>
+            <form role="form" method="post" action="~/Admin/displaySpecificPosts1">
+                <div class="form-group ">
+                    <div class="col-md-2">
+                        <label for="name" class="bg-warning">Ad Title*:</label>
+                    </div>
+                
+                    <div class="col-md-4">
+                        <input type="text" class="form-control" name="title" id="name" placeholder="Enter Name" required/>
+                    </div>  
+                     
+                </div>
+            
+                
+                <br/>
+                
+                <div class="col-md-2">
+                        <label for="op">Province:</label>
+                </div>
+                    <div class="col-md-4" id="op">
+                        <select class="form-control" id="con" name="prov" required>
+                            <option value="Select">Select</option>
+                            <option value="Khaber Pakhton Khawa">Khaber Pakhton Khawa</option>
+                            <option value="Punjab">Punjab</option>
+                            <option value="Sindh">Sindh</option>
+                            <option value="Balochistan">Balochistan</option>
+                            <option value="Azad Kashmir">Azad Kashmir</option>
+                        </select>
+                    </div>
+                    <br/>
+               <script>
+                        
+                    $("#con").change(function () {
+
+                     if($("#con").val() === ('Khaber Pakhton Khawa'))
+                     {
+                         //alert("Khaber Pakhton Khawa");
+                         $("#cty option").remove();
+                         $("#cty").append(" <option value='Kulachi'>Kulachi</option>  ");
+                         $("#cty").append(" <option value='Lakki Marwat'>Lakki Marwat</option>  ");
+                         $("#cty").append(" <option value='Latamber'>Adezai</option>  ");
+                         $("#cty").append(" <option value='Madyan'>Madyan</option>  ");
+                         $("#cty").append(" <option value='Mansehra'>Mansehra</option>  ");
+                         $("#cty").append(" <option value='Mardan'>Mardan</option>  ");
+                         $("#cty").append(" <option value='Mastuj'>Mastuj</option>  ");
+                         $("#cty").append(" <option value='Mingora'>Mingora</option>  ");
+                         $("#cty").append(" <option value='Nowshera'>Nowshera</option>  ");
+                         $("#cty").append(" <option value='Paharpur'> Paharpur</option>  ");
+                         $("#cty").append(" <option value='Pabbi'>Pabbi</option>  ");
+                         $("#cty").append(" <option value='Peshawar'>Peshawar</option>  ");
+                         $("#cty").append(" <option value='Saidu Sharif'>Saidu Sharif</option>  ");
+                         $("#cty").append(" <option value='Shewa Adda'>Shewa Adda</option>  ");
+                         $("#cty").append(" <option value='Swabi'>Swabi</option>  ");
+                         $("#cty").append(" <option value='Swat'>Swat</option>  ");
+                         $("#cty").append(" <option value='Tangi'>Tangi</option>  ");
+                         $("#cty").append(" <option value='Tank'>Tank</option>  ");
+                         $("#cty").append(" <option value='Thall'>Thall</option>  ");
+                         $("#cty").append(" <option value='Timergara'>Timergara</option>  ");
+                         $("#cty").append(" <option value='Tordher'>Tordher</option>  ");
+                         $("#cty").append(" <option value='Cherat'>Cherat</option>  ");
+                         $("#cty").append(" <option value='Risalpur'>Risalpur</option>  ");
+                         
+                     }
+                     if ($("#con").val() === ('Punjab')) {
+                         
+                         $("#cty option").remove();
+                         $("#cty").append(" <option value='Lahore'>Lahore</option>");
+                         $("#cty").append(" <option value='Faisalabad'>Faisalbad</option>");
+                         $("#cty").append(" <option value='Multan'>Multan</option>  ");
+                         $("#cty").append(" <option value='Sargodha'>Sargodha</option>  ");
+                         $("#cty").append(" <option value='Muree'>Muree</option>  ");
+                         $("#cty").append(" <option value='Narowal'>Narowal</option>  ");
+                         $("#cty").append(" <option value='Rawalpindi'>Rawalpindi</option>  ");
+                         $("#cty").append(" <option value='Mianwali'>Mianwali</option>  ");
+                     }
+                     if ($("#con").val() === ('Sindh')) {
+                         $("#cty option").remove();
+                         $("#cty").append(" <option value='Karachi'>Karachi</option>  ");
+                         $("#cty").append(" <option value='Dadu'>Dadu</option>  ");
+                         $("#cty").append(" <option value='Nauderu'>Nauderu</option>  ");
+                         $("#cty").append(" <option value='Hydrabad'>Hydrabad</option>  ");
+                         $("#cty").append(" <option value='Nawabshah'>Nawabshah</option>  ");
+                         $("#cty").append(" <option value='Jamshoru'>Jamshoru</option>  ");
+                         $("#cty").append(" <option value='Larkana'>Larkana</option>  ");
+                         $("#cty").append(" <option value='Mir pur khas'>Mir pur Khas</option>  ");
+                     }
+
+                     if ($("#con").val() === ('Balochistan')) {
+                         $("#cty option").remove();
+                         
+                         $("#cty").append(" <option value='Quetta'>Quetta</option>  ");
+                         $("#cty").append(" <option value='Sibi'>Sibi</option>  ");
+                         $("#cty").append(" <option value='Gawadar'>Gawadar</option>  ");
+                         $("#cty").append(" <option value='Chaman'>Chaman</option>  ");
+                         $("#cty").append(" <option value='Turbat'>Turbat</option>  ");
+                         $("#cty").append(" <option value='Khuzdar'>Khuzdar</option>  ");
+                     }
+                    
+
+
+
+
+                    });
+
+                </script>
+                    <div class="col-md-2">
+                        <label for="op">City:</label>
+                    </div>
+                    <div class="col-md-4" id="Div1">
+                        <select class="form-control" id="cty" name="city" required>
+                           <!-- <option value="Lahore">Lahore</option>
+                            <option value="Islamabad ">Islamabad </option>
+                            <option value="Faisalabad">Faisalabad</option>
+                            <option value="Karachi">Karachi</option>
+                            <option value="Gujranwala">Gujranwala</option>
+                            <option value="Sargodha">Sargodha</option> -->
+                        </select>
+                    </div>
+                    <button type="submit" class="btn btn-success">Search Ad</button>
+                </form>
+            </div>
+    </div>
+    
+                    <br/><br/>
